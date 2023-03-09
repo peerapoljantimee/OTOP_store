@@ -70,6 +70,12 @@ class DB_conn
         $str = mysqli_query($this->conn, $strSQL);
         return $str;
     }
+    public function display_prod()
+    {
+        $str = mysqli_query($this->conn, "SELECT * from shop_prod");
+        return $str;
+    }
+    
 }
 
 ?>
