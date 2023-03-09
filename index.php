@@ -36,7 +36,7 @@
 
 <body>
               <?php
-              include_once("page/404.html");
+              include_once("pages/404.html");
               ?>
 
 
