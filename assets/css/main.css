@@ -154,6 +154,7 @@ p {
   margin: 0 0 1.25rem 0;
 }
 
+
 p:last-child {
   margin: 0;
 }
@@ -2246,7 +2247,7 @@ ul.social-link-team li a {
 
 /* -----------------------------------------------------------------------------
 
-# Contact Page Styles
+contact# Contact Page Styles
 
 ----------------------------------------------------------------------------- */
 .form-title {
@@ -2261,20 +2262,29 @@ ul.social-link-team li a {
   font-size: 15px;
   line-height: 1.8;
 }
-
-.contact-form form p input[type=text], .contact-form form p input[type=tel], .contact-form form p input[type=email] {
-  width: 49%;
+/* เอาไว้ปรับ ช่องกล่องข้อความ input หน้า addmember*/
+.contact-form form p input[type=text], .contact-form form p input[type=tel], .contact-form form p input[type=email], .contact-form form p input[type=password] {
+  width: 150%;
+  height: 40px;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 3px;
+  /* justify-content: center !important; */
+  margin: 0 auto; /*add this line to center align the input box*/
+}
+.contact-from-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .contact-form form p textarea {
   border: 1px solid #ddd;
   padding: 15px;
-  height: 200px;
+  height: 100px;
   border-radius: 3px;
-  width: 100%;
+  width: 150%;
   resize: none;
 }
 
@@ -2755,4 +2765,23 @@ table.order-details tbody td {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
+}
+
+/* -----------------------------------------------------------------------------
+
+# addMember page Styles
+
+----------------------------------------------------------------------------- */
+.add-form textarea {
+  width: 100%;
+  max-width: 400px; /* adjust this value as needed */
+  margin: 0 auto;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  weight
 }

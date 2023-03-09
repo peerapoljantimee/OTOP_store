@@ -137,8 +137,8 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
-						<p>Fresh and Organic</p>
-						<h1>Cart</h1>
+						<h1>Hi!</h1>
+						<p>Welcome to Otop shop</p>
 					</div>
 				</div>
 			</div>
@@ -163,85 +163,41 @@
     <!-- Header-->
 
     <!-- Form สำหรับ สมัครสมาชิก -->
-    <div class="container-fluid pt-5 ">
-        <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">Register member</span></h2>
+	<div class="form-container">
+  <div class="contact-from-section mt-150 mb-150">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="form-title px-5 "><span class="px-2">Register member</span></h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mb-5 mb-lg-0" >
+          <div class="contact-form" >
+            <form name="fruitkha-contact" id="fruitkha-contact" action="member.php" method='POST'>
+              <p>
+                <input type="text" id="name" name="name" placeholder="Your firstname and lastname" required="required"/>
+              </p>
+              <p>
+                <input type="email" id="email" name="email" placeholder="Your Email" required="required"/>
+              </p>
+              <p>
+                <input type="text" id="username" name="username" placeholder="Your Username" required="required"/>
+              </p>
+              <p>
+                <input type="password" id="password" name="password" placeholder="Your Password" required="required"/>
+              </p>
+              <p>
+                <textarea name="address" id="address" cols="10" rows="20" placeholder="Your address"></textarea>
+              </p>
+              <div class="cart-buttons">
+                <p><input type="submit" value="Submit"></p>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="row px-xl-5">
-            <div class="col-lg-7 mb-5 justify-content-center">
-                <div class="contact-from">
-                    <div id="success"></div>
-                    <form name="addMember" id="addMember" action="member.php" method='POST'>
-                        <div class="control-group">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="กรุณากรอกชื่อ-นามสกุล" required="required"/>
-                            
-                        </div>
-                        <div class="control-group">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required="required"/>                   
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control" id="username" name="username" placeholder="Your Username" required="required"/>
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control" id="password" name="password" placeholder="Your Password" required="required"/>
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control" id="address" name="address" placeholder="Your address" required="required"/>
-                        </div>
-                        <div class="cart-buttons">
-                            <!-- <button class="boxed-btn" type="submit" id="sendMessageButton"><i class="fas fa-shopping-cart"></i>Submit</button> -->
-                            <p><input type="submit" value="Submit"></p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-
-    <div class="contact-from-section mt-150 mb-150">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 mb-5 mb-lg-0">
-					<div class="form-title">
-						<h2>Have you any question?</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ratione! Laboriosam est, assumenda. Perferendis, quo alias quaerat aliquid. Corporis ipsum minus voluptate? Dolore, esse natus!</p>
-					</div>
-				 	<div id="form_status"></div>
-					<div class="contact-form">
-						<form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
-							<p>
-								<input type="text" placeholder="Name" name="name" id="name">
-								<input type="email" placeholder="Email" name="email" id="email">
-							</p>
-							<p>
-								<input type="tel" placeholder="Phone" name="phone" id="phone">
-								<input type="text" placeholder="Subject" name="subject" id="subject">
-							</p>
-							<p><textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></p>
-							<input type="hidden" name="token" value="FsWga4&@f6aw" />
-							<p><input type="submit" value="Submit"></p>
-						</form>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="contact-form-wrap">
-						<div class="contact-form-box">
-							<h4><i class="fas fa-map"></i> Shop Address</h4>
-							<p>34/8, East Hukupara <br> Gifirtok, Sadan. <br> Country Name</p>
-						</div>
-						<div class="contact-form-box">
-							<h4><i class="far fa-clock"></i> Shop Hours</h4>
-							<p>MON - FRIDAY: 8 to 9 PM <br> SAT - SUN: 10 to 8 PM </p>
-						</div>
-						<div class="contact-form-box">
-							<h4><i class="fas fa-address-book"></i> Contact</h4>
-							<p>Phone: +00 111 222 3333 <br> Email: support@fruitkha.com</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  </div>
+</div>
 
     <!-- Footer-->
     <?php
