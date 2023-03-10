@@ -1,6 +1,6 @@
 <!-- Pamornpon Teethong 6430250229 -->
 <?php
-include_once("connectDB.php");
+include_once("pages/connectDB.php");
 $conndb = new DB_conn; //สร้าง object ชื่อ $condb
 $con = $conndb->conn; //การเข้าถึงตัวแปรใน class ตั้งชื่อเป็น $con
 
@@ -23,7 +23,7 @@ if($sql){
     } 
 else {
     echo "<script>alert('เกิดข้อผิดพลาด')</script>";
-    echo "<script>window.location.href='register.php' </script>";
+    echo "<script>window.location.href='addMember.php' </script>";
      }
 mysqli_close($con);
 ?>

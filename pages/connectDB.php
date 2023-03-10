@@ -39,11 +39,11 @@ class DB_conn
         $str = mysqli_query($this->conn, "SELECT * from member where member_id = $id");
         return $str;
     }
-    public function edit_member($fname, $lastname, $email, $id)
+    public function edit_member($username, $password, $name, $email, $address, $id)
     {
-        $str = mysqli_query($this->conn, "UPDATE member SET first_name = '$fname', last_name =
-       '$lastname',
-        email = '$email' WHERE member_id = $id ");
+        $str = mysqli_query($this->conn, "UPDATE member SET username = '$username', password =
+       '$password',
+        name = '$name', email = '$email', address = '$address' WHERE member_id = $id ");
         return $str;
     }
     public function del_member($id)
@@ -72,35 +72,21 @@ class DB_conn
     }
 
 
-    // ฟังชั่นของ ส้้นตรีน
     public function display_prod()
     {
         $str = mysqli_query($this->conn, "SELECT * from shop_prod");
         return $str;
     }
 
-
-    public function del_prod($id)
+    public function check_login($username,$password)
     {
-        $str = mysqli_query($this->conn, "DELETE FROM shop_prod WHERE prod_id = $id ");
-        return $str;
+            // Get username and password from form
+        
+            // Prepare SQL statement to retrieve member details
+            $sql = "SELECT * FROM member WHERE username = '$username' AND password = '$password'";
+            $result = $this->conn->query($sql);
+            return $result;
     }
-
-    public function display_prod_edit($id)
-    {
-        $str = mysqli_query($this->conn, "SELECT * from shop_prod where prod_id = '$id' ");
-        return $str;
-    }
-
-    public function edit_prod($pname, $price, $detail, $id)
-    {
-        $str = mysqli_query($this->conn, "UPDATE shop_prod SET prod_name = '$pname', prod_price = '$price', prod_detail = '$detail' WHERE prod_id = '$id' ");
-        return $str;
-    }
-
-    
-
-    
     
 }
 

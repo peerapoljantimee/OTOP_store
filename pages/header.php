@@ -105,19 +105,25 @@
                   </li>
                   <li>
                     <div class="header-icons">
+                    <a href="#"><i class="fas fa-user"></i
+                      ></a>
+                    <ul class="sub-menu">
+                      <li><?php echo" <a href=' $parentPath/login.php'>Login</a>" ;?><li>
+                      <li><?php echo" <a href=' $parentPath/addMember.php'>Register</a>" ;?><li>
+                    </ul>
                       <a class="shopping-cart" href="cart.html"
-                        ><i class="fas fa-shopping-cart"></i
+                      ><i class="fas fa-shopping-cart"></i
                       ></a>
-                      <a class="mobile-hide search-bar-icon" href="#"
-                        ><i class="fas fa-search"></i
-                      ></a>
+                      <!-- <a class="mobile-hide search-bar-icon" href="#"
+                      ><i class="fas fa-search"></i
+                      ></a> -->
                     </div>
                   </li>
                 </ul>
               </nav>
-              <a class="mobile-show search-bar-icon" href="#"
+              <!-- <a class="mobile-show search-bar-icon" href="#"
                 ><i class="fas fa-search"></i
-              ></a>
+              ></a> -->
               <div class="mobile-menu"></div>
               <!-- menu end -->
             </div>
