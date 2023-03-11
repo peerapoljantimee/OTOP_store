@@ -70,14 +70,34 @@ class DB_conn
         $str = mysqli_query($this->conn, $strSQL);
         return $str;
     }
-
-
+        // ฟังชั่นของ ส้้นตรีน
     public function display_prod()
     {
         $str = mysqli_query($this->conn, "SELECT * from shop_prod");
         return $str;
     }
 
+
+    public function del_prod($id)
+    {
+        $str = mysqli_query($this->conn, "DELETE FROM shop_prod WHERE prod_id = $id ");
+        return $str;
+    }
+
+    public function display_prod_edit($id)
+    {
+        $str = mysqli_query($this->conn, "SELECT * from shop_prod where prod_id = '$id' ");
+        return $str;
+    }
+
+    public function edit_prod($pname, $price, $detail, $id)
+    {
+        $str = mysqli_query($this->conn, "UPDATE shop_prod SET prod_name = '$pname', prod_price = '$price', prod_detail = '$detail' WHERE prod_id = '$id' ");
+        return $str;
+    }
+
+
+    //Login Form
     public function check_login($username,$password)
     {
             // Get username and password from form
