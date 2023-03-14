@@ -1,40 +1,9 @@
+<?php
+	include_once("pages/header.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <html>
-
-<head>
-<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
-
-	<!-- title -->
-	<title>Fruitkha</title>
-
-	<!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
-	<!-- google font -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-	<!-- fontawesome -->
-	<link rel="stylesheet" href="assets/css/all.min.css">
-	<!-- bootstrap -->
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-	<!-- owl carousel -->
-	<link rel="stylesheet" href="assets/css/owl.carousel.css">
-	<!-- magnific popup -->
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
-	<!-- animate css -->
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<!-- mean menu css -->
-	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
-	<!-- main style -->
-	<link rel="stylesheet" href="assets/css/main.css">
-	<!-- responsive -->
-	<link rel="stylesheet" href="assets/css/responsive.css">
-
-</head>
-
 <body>
     <!--PreLoader-->
     <div class="loader">
@@ -45,9 +14,7 @@
     <!--PreLoader Ends-->
 	
 	<!-- Header -->
-	<?php
-	include_once("pages/header.php");
-	?>
+
 
 	<!-- breadcrumb-section -->
 	<div class="breadcrumb-section breadcrumb-bg">
@@ -81,49 +48,28 @@
     <!-- Header-->
 
     <!-- Form สำหรับ สมัครสมาชิก -->
-	<div class="form-container">
-  <div class="contact-from-section mt-150 mb-150">
-    <div class="container">
-      <div class="text-center mb-4">
-        <h2 class="form-title px-5 "><span class="px-2">Register member</span></h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 mb-5 mb-lg-0" >
-          <div class="contact-form" >
-            <form name="fruitkha-contact" id="fruitkha-contact" action="member.php" method='POST'>
-              <p>
-                <input type="text" id="name" name="name" placeholder="Your firstname and lastname" required="required"/>
-              </p>
-              <p>
-                <input type="email" id="email" name="email" placeholder="Your Email" required="required"/>
-              </p>
-              <p>
-                <input type="text" id="username" name="username" placeholder="Your Username" required="required"/>
-              </p>
-              <p>
-                <input type="password" id="password" name="password" placeholder="Your Password" required="required"/>
-              </p>
-              <p>
-                <textarea name="address" id="address" cols="10" rows="20" placeholder="Your address"></textarea>
-              </p>
-              <div class="cart-buttons">
-                <p><input type="submit" value="Submit"></p>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+    <div class="register-form">
+        <h1>Register member</h1>
+        <form action="member.php" method="post">
+          <input type="text" id="name" name="name" placeholder="Your firstname and lastname" required="required"/>
+          <input type="email" id="email" name="email" placeholder="Your Email" required="required"/>
+          <input type="text" id="username" name="username" placeholder="Your Username" required="required"/>
+          <input type="password" id="password" name="password" placeholder="Your Password" required="required"/>
+          <textarea name="address" id="address" cols="10" rows="20" placeholder="Your address"></textarea>
+            <div class="text-center">
+                <input type="submit">
+            </div>
+        </form>
     </div>
-  </div>
-</div>
 
-    <!-- Footer-->
-    <?php
-    ?>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-    <!-- jquery -->
+  <!-- Footer-->
+  <?php
+    include_once('pages/footer.php')
+  ?>
+
+
+  <!-- jquery -->
 	<script src="assets/js/jquery-1.11.3.min.js"></script>
 	<!-- bootstrap -->
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>

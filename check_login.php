@@ -20,11 +20,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $row["name"];
         $email = $row["email"];
         $address = $row["address"];
-        echo "Welcome, " . $username . "!";
-        echo "<script>alert('ล็อกอินสำเร็จ Welcome, " . $username . "!')</script>";
-        echo "<script>window.location.href='pages/displayMember.php' </script>";
-        // Redirect to member profile page or display member details
-        // Example: header("Location: profile.php?member_id=$member_id");
+        if($username == 'admin'){
+            echo "<script>alert('Hi ! Welcome back, " . $username . "!')</script>";
+            echo "<script>window.location.href='pages/displayMember.php' </script>";
+        }
+        else{
+            echo "<script>alert('ล็อกอินสำเร็จ Welcome, " . $username . "!')</script>";
+            echo "<script>window.location.href='index.php' </script>";
+        }
     } else {
         // Member does not exist in database
         echo "<script>alert('เกิดข้อผิดพลาด')</script>";

@@ -1,3 +1,8 @@
+<?php
+  // fix path 
+  $parentPath = '/Shop';
+  $parentPath2 = '/Shop/pages'
+?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,27 +16,37 @@
 	<title>Fruitkha</title>
 
 	<!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+  <?php echo"<link rel='shortcut icon' type='image/png' href=' $parentPath/assets/img/favicon.png'>" ;?>
 	<!-- google font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 	<!-- fontawesome -->
-	<link rel="stylesheet" href="assets/css/all.min.css">
+  <?php echo"<link rel='stylesheet' href='$parentPath/assets/css/all.min.css'>" ;?>
+	
 	<!-- bootstrap -->
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <?php echo"<link rel='stylesheet' href='$parentPath/assets/bootstrap/css/bootstrap.min.css'>" ;?>
+	
 	<!-- owl carousel -->
-	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+  <?php echo"<link rel='stylesheet' href='$parentPath/assets/css/owl.carousel.css'>" ;?>
+	
 	<!-- magnific popup -->
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <?php echo"<link rel='stylesheet' href='$parentPath/assets/css/magnific-popup.css'>" ;?>
+	
 	<!-- animate css -->
-	<link rel="stylesheet" href="assets/css/animate.css">
+  <?php echo"<link rel='stylesheet' href='$parentPath/assets/css/animate.css'>" ;?>
+	
 	<!-- mean menu css -->
-	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+  <?php echo"<link rel='stylesheet' href='$parentPath/assets/css/meanmenu.min.css'>" ;?>
+	
 	<!-- main style -->
-	<link rel="stylesheet" href="assets/css/main.css">
+  <?php echo"<link rel='stylesheet' href='$parentPath/assets/css/main.css'>" ;?>
+	
 	<!-- responsive -->
-	<link rel="stylesheet" href="assets/css/responsive.css">
-
+  <?php echo"<link rel='stylesheet' href='$parentPath/assets/css/responsive.css'>" ;?>
+  
+	<!-- extra icon back-to-top -->
+  <?php echo"<link rel='stylesheet' href='$parentPath/assets/webfonts/simple-line-icons.css'>" ;?>
+  
 </head>
 
 
@@ -44,9 +59,7 @@
             <div class="main-menu-wrap">
               <!-- logo -->
               <div class="site-logo">
-                <a href="index.php">
-                  <img src="assets/img/logo.png" alt="" />
-                </a>
+                <?php echo "<a href='$parentPath/index.php'><img src='$parentPath/assets/img/logo.png' alt=''></a>" ?>
               </div>
               <!-- logo -->
 
@@ -56,34 +69,22 @@
                   <li class="current-list-item">
                     <a href="#">Home</a>
                     <ul class="sub-menu">
-
-                    
-                    <?php
-                    // fix path 
-                    $parentPath = '/Shop';
-                    $parentPath2 = '/Shop/pages'
-                    ?> 
-
-                      <li><?php echo" <a href=' $parentPath/index.php'>Static Home</a>" ;?><li>
-
-                   
-                      <li><?php echo" <a href=' $parentPath2/addProd.php'>AddProd</a>" ;?><li>
-         
-                     
+                      <li><?php echo" <a href=' $parentPath/index.php'>Static Home</a>" ;?></li>
+                      <li><?php echo" <a href=' $parentPath2/addProd.php'>AddProd</a>" ;?></li>
                     </ul>
-                    
                   </li>
                   <li><a href="about.html">About</a></li>
                   <li>
                     <a href="#">Pages</a>
                     <ul class="sub-menu">
-                      <li><a href="404.html">404 page</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="cart.html">Cart</a></li>
-                      <li><a href="checkout.html">Check Out</a></li>
-                      <li><a href="contact.html">Contact</a></li>
+                      <li><?php echo"<a href='$parentPath/404.html'>404 page</a>" ;?></li>
+                      <li><?php echo"<a href='$parentPath/about.html'>About</a>" ;?></li>
+                      <li><?php echo"<a href='$parentPath/cart.html'>Cart</a>" ;?></li>
+                      <li><?php echo"<a href='$parentPath/checkout.html'>Check Out</a>" ;?></li>
+                      <li><?php echo"<a href='$parentPath/contact.html'>Contact</a>" ;?></li>
                       <!-- <li><a href="news.html">News</a></li> -->
-                      <li><a href="shop.html">Shop</a></li>
+                      <li><?php echo"<a href='$parentPath/shop.html'>Shop</a>" ;?></li>
+                      <li><?php echo"<a href='$parentPath2/displayMember.php'>DisplayMember</a>" ;?></li>
                     </ul>
                   </li>
                   <!-- <li>
@@ -97,28 +98,26 @@
                   <li>
                     <a href="shop.html">Shop</a>
                     <ul class="sub-menu">
-                      <li><a href="shop.html">Shop</a></li>
-                      <li><a href="checkout.html">Check Out</a></li>
-                      <li><a href="single-product.html">Single Product</a></li>
-                      <li><a href="cart.html">Cart</a></li>
+                      <li><?php echo"<a href='$parentPath/shop.html'>Shop</a>" ;?></li>
+                      <li><?php echo"<a href='$parentPath/checkout.html'>Check Out</a>" ;?></li>
+                      <li><?php echo"<a href='$parentPath/single-product.html'>Single Product</a>" ;?></li>
+                      <li><?php echo"<a href='$parentPath/cart.html'>Cart</a>" ;?></li>
                     </ul>
                   </li>
-                  <li>
-                    <div class="header-icons">
-                    <a href="#"><i class="fas fa-user"></i
-                      ></a>
-                    <ul class="sub-menu">
-                      <li><?php echo" <a href=' $parentPath/login.php'>Login</a>" ;?><li>
-                      <li><?php echo" <a href=' $parentPath/addMember.php'>Register</a>" ;?><li>
+
+                  <li style="float:right">
+                    <a href="#"><i class="fa fa-user"></i></a>
+                      <ul class="sub-menu">
+                      <li><?php echo"<a href='$parentPath/login.php'>Login</a>" ;?></li>
+                      <li><?php echo"<a href='$parentPath/addMember.php'>Register</a>" ;?></li>
                     </ul>
-                      <a class="shopping-cart" href="cart.html"
-                      ><i class="fas fa-shopping-cart"></i
-                      ></a>
-                      <!-- <a class="mobile-hide search-bar-icon" href="#"
-                      ><i class="fas fa-search"></i
-                      ></a> -->
-                    </div>
                   </li>
+                  <li style="float:right">
+                    <?php echo"<a href='cart.html'><i class='fa fa-shopping-cart'></i></a>" ;?>
+                  </li>
+
+                  
+
                 </ul>
               </nav>
               <!-- <a class="mobile-show search-bar-icon" href="#"
@@ -152,28 +151,31 @@
 	</div>
 	<!-- end search area -->
 
-	
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="icon-arrow-up"></i>
+    </a>
  
            
     <!-- end header -->
 
     <!-- jquery -->
-    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="../assets/js/jquery-1.11.3.min.js"></script>
     <!-- bootstrap -->
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <!-- count down -->
-    <script src="assets/js/jquery.countdown.js"></script>
+    <script src="../assets/js/jquery.countdown.js"></script>
     <!-- isotope -->
-    <script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+    <script src="../assets/js/jquery.isotope-3.0.6.min.js"></script>
     <!-- waypoints -->
-    <script src="assets/js/waypoints.js"></script>
+    <script src="../assets/js/waypoints.js"></script>
     <!-- owl carousel -->
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="../assets/js/owl.carousel.min.js"></script>
     <!-- magnific popup -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
     <!-- mean menu -->
-    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="../assets/js/jquery.meanmenu.min.js"></script>
     <!-- sticker js -->
-    <script src="assets/js/sticker.js"></script>
+    <script src="../assets/js/sticker.js"></script>
     <!-- main js -->
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>

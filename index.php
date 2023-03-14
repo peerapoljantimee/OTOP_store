@@ -37,7 +37,7 @@
 <body>
               <?php
 	//include_once("header.php");
-	include_once("header.php");
+	include_once("pages/header.php");
               
               ?>
 
@@ -66,6 +66,7 @@
 <?php
 	 include_once("pages/footer.php");	
 ?>
+
 
 
 </body>

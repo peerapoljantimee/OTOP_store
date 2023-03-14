@@ -19,14 +19,13 @@
 	    margin-bottom: 15px;
 	}
 	.contact-form form p input[type=email] {
-	    margin: 0 auto;
+	    margin-left: 8px;
 	}
 	.contact-form-box h4 i {
 	    left: -20%;
 	}
 	.comment-template form p input[type=email] {
-	    /* margin-left: 8px; */
-		margin: 0 auto;
+	    margin-left: 8px;
 	}
 	ul.main-menu li a {
 	    padding: 15px 13px;
@@ -37,6 +36,9 @@
 	ul.sub-menu li a {
 	    padding: 7px 10px;
 	}
+	/* .header-icons .user-container {
+		display: none;
+	} */
 
 }
 /* Tablet Layout: 768px. */
@@ -65,19 +67,19 @@
 	.order-details-wrap {
 	    margin-top: 50px;
 	}
-	/* .contact-form form p input[type=text], 
+	.contact-form form p input[type=text], 
 	.contact-form form p input[type=tel], 
 	.contact-form form p input[type=email] {
 	    width: 100%;
-	} */
+	}
 
-	/* .contact-form form p input[type=email] {
+	.contact-form form p input[type=email] {
 	    margin-left: 0;
 	    margin-top: 15px;
 	}
 	.contact-form form p input[type=tel] {
-		margin-bottom: 15px; */
-	}
+		margin-bottom: 15px; 
+	} 
 
 	.hero-area div.hero-form {
 		width: 325px;
