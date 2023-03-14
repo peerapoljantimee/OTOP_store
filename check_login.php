@@ -11,7 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare SQL statement to retrieve member details
     $sql = "SELECT * FROM member WHERE username = '$username' AND password = '$password'";
-    $result = $conndb->conn->query($sql);
+    // $result = $conndb->conn->query($sql);
+    $result = mysqli_query($con,$sql);
 
     if ($result->num_rows == 1) {
         // Member exists in database
@@ -30,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } else {
         // Member does not exist in database
-        echo "<script>alert('เกิดข้อผิดพลาด')</script>";
+        echo "<script>alert('username หรือ password ไม่ถูกต้อง')</script>";
         echo "<script>window.location.href='login.php' </script>";
     }
 }

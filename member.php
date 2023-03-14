@@ -10,20 +10,27 @@ $email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 $address = $_POST['address'];
-//echo $fname,$lname,$mname,$email,$username,$password,$type;
 
-$sql = $conndb->insert_member($name,$email,$username,$password,$address);
-// $sql = $conndb->insert_member();
-if(mysqli_query($con,$sql)){
-    printf("%d Row insert. \n",mysqli_affected_rows($con));
-}
-if($sql){
-    echo "<script>alert('สมัครสมาชิกสำเร็จ')</script>";
-    echo "<script>window.location.href='login.php' </script>";
-    } 
-else {
-    echo "<script>alert('เกิดข้อผิดพลาด')</script>";
+
+$sql_check = "SELECT * FROM member WHERE username = '$username'";
+$sql_insert = $conndb->insert_member($name,$email,$username,$password,$address);
+
+$result = mysqli_query($con, $sql_check);
+if(mysqli_num_rows($result) > 0) {
+    echo "<script>alert('username นี้ ถูกใช้งานแล้ว')</script>";
     echo "<script>window.location.href='addMember.php' </script>";
-     }
+  } 
+else {
+    if(mysqli_query($con, $sql_insert)){
+        echo "<script>alert('สมัครสมาชิกสำเร็จ')</script>";
+        echo "<script>window.location.href='login.php' </script>";
+    } 
+    else {
+        echo "<script>alert('เกิดข้อผิดพลาด')</script>";
+        echo "<script>window.location.href='addMember.php' </script>";
+        }
+}
+
+
 mysqli_close($con);
 ?>
