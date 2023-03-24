@@ -85,6 +85,7 @@
                       <!-- <li><a href="news.html">News</a></li> -->
                       <li><?php echo"<a href='$parentPath/shop.html'>Shop</a>" ;?></li>
                       <li><?php echo"<a href='$parentPath2/displayMember.php'>DisplayMember</a>" ;?></li>
+                      <li><?php echo"<a href='$parentPath2/displayProd.php'>DisplayProd</a>" ;?></li>
                     </ul>
                   </li>
                   <!-- <li>

@@ -1,7 +1,7 @@
-<!-- <?php
+<?php
 include_once("connectDB.php");
 $conn = new DB_conn; //สร้าง object ชื่อ $condb
-?> -->
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -138,22 +138,6 @@ $conn = new DB_conn; //สร้าง object ชื่อ $condb
                             <?php
                         }
                         // ?>
-
-
-
-                  <tr class="table-body-row">
-                    <td class="product-image">
-                      <!-- <img src="../assets/img/products/product-img-1.jpg" alt="" /> -->
-                      <img src="../p_img/product-img-1.jpg" alt="" />
-                      
-                    </td>
-                    <td class="product-name">Strawberry</td>
-                    <td class="product-price">$85</td>
-                    <td class="product-Detail">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-                    <td class="product-Prod_id">000</td>
-                  </tr>
-
-
                 </tbody>
               </table>
             </div>

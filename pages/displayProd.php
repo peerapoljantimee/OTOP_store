@@ -1,7 +1,7 @@
-<!-- <?php
+<?php
 include_once("connectDB.php");
 $conn = new DB_conn; //สร้าง object ชื่อ $condb
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -126,39 +126,12 @@ $conn = new DB_conn; //สร้าง object ชื่อ $condb
                                 <td class="product-Detail"> <?php echo $data['prod_detail'] ?> </td>
                                 <td class="product-Prod_id"> <?php echo $data['prod_id'] ?> </td>
 
-                                
                                 <td class="product-edit"><a href= "formEdit_Prod.php?id=<?php echo $data['prod_id'] ?>">
                                 <i class="bx bx-edit bx-md" ></i></a></td>
-
-
 
                                 <td class="product-del"><a href="del_Prod.php?id=<?php echo $data['prod_id'] ?>"
                                 onclick="return confirm('คุณต้องการลบข้อมูลใช่หรือไม่')">       
                                 <i class="bx bx-x-circle bx-md"></i></a></td>
-
-                                
-
-                                <!-- <i class="fa fa-times"></i> -->
-
-                               
-
-    
-                            <!-- 
-                            <td class="align-middle"><a href="del.php?id=<?php echo $data['member_id'] ?>"
-                            class="btn btn-sm btnprimary"
-                            onclick="return confirm('คุณต้องการลบข้อมูลใช่หรือไม่')"><i class="fa fa-times"></i></a>
-                            </td>
-                            -->
-
-                            <!-- 
-                            <td class="align-middle"><a href="formEdit.php?id=<?php echo $data['member_id'] ?>" class="btn btn-sm 
-                            btn-primary"> Edit</a></td>
-                            -->
-
-                              
-
-
-
         
                             </tr>
                             <?php $i = $i + 1;  ?>
@@ -167,31 +140,6 @@ $conn = new DB_conn; //สร้าง object ชื่อ $condb
                         // ?>
 
 
-
-                  <tr class="table-body-row">
-                    <td class="product-image">
-                      <!-- <img src="../assets/img/products/product-img-1.jpg" alt="" /> -->
-                      <img src="../p_img/product-img-1.jpg" alt="" />
-                      
-                    </td>
-                    <td class="product-name">Strawberry</td>
-                    <td class="product-price">$85</td>
-                    <td class="product-Detail">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-                    <td class="product-Prod_id">000</td>
-
-                    <td class="product-edit"><a href= "formEdit_Prod.php?id=<?php echo $data['prod_id'] ?>">
-                    <i class="bx bx-edit bx-md" ></i></a></td>
-
-                    <td class="product-del"><a href="del_Prod.php?id=<?php echo $data['prod_id'] ?>"
-                    onclick="return confirm('คุณต้องการลบข้อมูลใช่หรือไม่')">       
-                    <i class="bx bx-x-circle bx-md"></i></a></td>
-
-            
-
-
-
-
-                  </tr>
 
 
                 </tbody>

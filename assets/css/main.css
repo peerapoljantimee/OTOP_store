@@ -2898,3 +2898,17 @@ a.back-to-top i {
 a.back-to-top:hover, a.back-to-top:focus {
   text-decoration: none;
 }
+
+/* --- product edit and delete  ----*/
+
+td.product-edit a, td.product-del a  {
+  /* เปลี่ยนสี icon */
+  color: #F28123;
+}
+
+td.product-edit a:hover, td.product-del a:hover {
+  /* เปลี่ยนสี icon เมื่อคลิกเมาส์ */
+  color: #ff0000;
+  text-decoration: none;
+}
+/* ----------------------*/

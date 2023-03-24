@@ -22,7 +22,12 @@ class DB_conn
         }
         // $this->conn = $conn;
     }
-    // function insert_member(){
+    
+    /* -----------------------------------------------------------------------------
+
+    # ฟังชั่น Member
+
+    ----------------------------------------------------------------------------- */
     function insert_member($name, $email, $username, $password, $address)
     {
         $sql = "insert into member(name,email,username,password,address)
@@ -51,17 +56,12 @@ class DB_conn
         $str = mysqli_query($this->conn, "DELETE FROM member WHERE member_id = $id ");
         return $str;
     }
-    // public function select_category(){
-    //     $strSQL = "SELECT * FROM category ORDER BY c_name ASC";
-    //     $str = mysqli_query($this->conn, $strSQL);
-    //     return $str;
-    // }
-    //product
-    public function select_category()
-    {
-        $str = mysqli_query($this->conn, "SELECT * from category");
-        return $str;
-    }
+
+    /* -----------------------------------------------------------------------------
+
+    # ฟังชั่น Product
+
+    ----------------------------------------------------------------------------- */
     public function insert_product($p_name, $p_detail, $p_price, $path_img)
     {
         //ตัวคอลลัมน์เป็นตัวหนังสือให้ใส่ ซิงเกิ้ลโคว้ตด้วย '' or ""
@@ -70,7 +70,7 @@ class DB_conn
         $str = mysqli_query($this->conn, $strSQL);
         return $str;
     }
-        // ฟังชั่นของ ส้้นตรีน
+
     public function display_prod()
     {
         $str = mysqli_query($this->conn, "SELECT * from shop_prod");
@@ -97,7 +97,11 @@ class DB_conn
     }
 
 
-    //Login Form
+    /* -----------------------------------------------------------------------------
+
+    # ฟังชั่น Login
+
+    ----------------------------------------------------------------------------- */
     public function check_login($username,$password)
     {
             // Get username and password from form
