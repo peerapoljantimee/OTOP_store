@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <html>
-<body>
+<body class="body-register">
     <!--PreLoader-->
     <div class="loader">
         <div class="loader-inner">

@@ -1,22 +1,20 @@
 <?php
-	include_once("pages/header.php");
+include_once("pages/header.php");
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>Login</title>
-</head>
-<body>
-<body>
-    <!--PreLoader-->
-    <div class="loader">
-        <div class="loader-inner">
-            <div class="circle"></div>
-        </div>
-    </div>
-    <!--PreLoader Ends-->
-	
+	<meta charset="utf-8">
+	<title>Login</title>
+	<!--PreLoader-->
+	<div class="loader">
+		<div class="loader-inner">
+			<div class="circle"></div>
+		</div>
+	</div>
+	<!--PreLoader Ends-->
+
 	<!-- Header -->
 
 
@@ -34,26 +32,35 @@
 		</div>
 	</div>
 	<!-- end breadcrumb section -->
+</head>
 
-    <!-- Login section -->
-    <div class="login-form mt-150 mb-150">
-        <h1>Login member</h1>
-        <form action="check_login.php" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <div class="text-center">
-                <input type="submit">
-            </div>
-        </form>
-    </div>
+<body class="body-login">
+
+	<!-- Login section -->
+	<div class="login-form mt-150 mb-150">
+		<div class="container">
+			<h1>Login member</h1>
+			<form action="check_login.php" method="post">
+				<input type="text" name="username" placeholder="Username" required>
+				<input type="password" name="password" placeholder="Password" required>
+				<div class="text-center">
+					<input type="submit">
+				</div>
+			</form>
+		</div>
+	</div>
 
 
-    <!-- Footer-->
-    <?php
-        include_once('pages/footer.php')
-    ?>
 
-    <!-- jquery -->
+</body>
+<footer>
+
+	<!-- Footer-->
+	<?php
+	include_once('pages/footer.php')
+	?>
+
+	<!-- jquery -->
 	<script src="assets/js/jquery-1.11.3.min.js"></script>
 	<!-- bootstrap -->
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -73,6 +80,6 @@
 	<script src="assets/js/sticker.js"></script>
 	<!-- main js -->
 	<script src="assets/js/main.js"></script>
+</footer>
 
-</body>
 </html>

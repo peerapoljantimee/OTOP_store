@@ -101,7 +101,7 @@
                     <ul class="sub-menu">
                       <li><?php echo"<a href='$parentPath/shop.html'>Shop</a>" ;?></li>
                       <li><?php echo"<a href='$parentPath/checkout.html'>Check Out</a>" ;?></li>
-                      <li><?php echo"<a href='$parentPath/single-product.html'>Single Product</a>" ;?></li>
+                      <li><?php echo"<a href='$parentPath2/single-product.php'>Single Product</a>" ;?></li>
                       <li><?php echo"<a href='$parentPath/cart.html'>Cart</a>" ;?></li>
                     </ul>
                   </li>
