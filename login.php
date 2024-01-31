@@ -37,14 +37,14 @@ include_once("pages/header.php");
 <body class="body-login">
 
 	<!-- Login section -->
-	<div class="login-form mt-150 mb-150">
+	<div class="login-form mt-150 mb-150 animated fadeInDown">
 		<div class="container">
 			<h1>Login member</h1>
 			<form action="check_login.php" method="post">
-				<input type="text" name="username" placeholder="Username" required>
-				<input type="password" name="password" placeholder="Password" required>
-				<div class="text-center">
-					<input type="submit">
+				<input type="text" name="username" placeholder="Username" required class="animated fadeInDown" style="animation-delay: 0.5s;">
+				<input type="password" name="password" placeholder="Password" required class="animated fadeInDown" style="animation-delay: 1s;">
+				<div class="text-center animated fadeInDown" style="animation-delay: 1.5s;">
+					<input type="submit" value='Login'>
 				</div>
 			</form>
 		</div>

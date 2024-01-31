@@ -1,96 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+//include_once("header.php");
+include_once("pages/header.php");
+
+?>
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
-
-	<!-- title -->
-	<title>Fruitkha</title>
-
-	<!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
-	<!-- google font -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-	<!-- fontawesome -->
-	<link rel="stylesheet" href="assets/css/all.min.css">
-	<!-- bootstrap -->
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-	<!-- owl carousel -->
-	<link rel="stylesheet" href="assets/css/owl.carousel.css">
-	<!-- magnific popup -->
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
-	<!-- animate css -->
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<!-- mean menu css -->
-	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
-	<!-- main style -->
-	<link rel="stylesheet" href="assets/css/main.css">
-	<!-- responsive -->
-	<link rel="stylesheet" href="assets/css/responsive.css">
+   <!-- title -->
+   <title>OTOP Nakhonpanom</title>
 
 </head>
 
 <body>
-	<?php
-	//include_once("header.php");
-	include_once("pages/header.php");
-
-	?>
-
-	<!-- hero area -->
-	<div class="hero-area hero-bg">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-9 offset-lg-2 text-center">
-					<div class="hero-text">
-						<div class="hero-text-tablecell">
-							<p class="subtitle">Fresh & Organic</p>
-							<h1>Delicious Seasonal Fruits</h1>
-							<div class="hero-btns">
-								<a href="shop.html" class="boxed-btn">Fruit Collection</a>
-								<a href="contact.html" class="bordered-btn">Contact Us</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end hero area -->
 
 
-	<?php
+   <!-- hero area -->
+   <div class="hero-area hero-bg">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-9 offset-lg-2 text-center">
+               <div class="hero-text">
+                  <div class="hero-text-tablecell">
+                     <p class="subtitle">สินค้า OTOP • จังหวัดนครพนม</p>
+                     <h1>กระเป๋าสานจากต้นกก</h1>
+                     <div id="navbarResponsive">
+                        <div class="hero-btns">
+                           <a href="shop.php" class="boxed-btn">ซื้อเลย!</a>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <?php
 	include_once("pages/features.php");
-	include_once("pages/prod_section4.php");
-	include_once("pages/footer.php");
-
 	?>
+   <!-- end hero area -->
+   <div class="product-section mt-150 mb-150" id="shop">
+      <div class="container">
+         <div class="row ">
+            <div class="col-lg-8 offset-lg-2 text-center">
+               <div class="section-title">
+                  <h3><span class="orange-text">สินค้า</span> ของเรา</h3>
+                  <p>
+                     กระเป๋าสานจากต้นกก รูปทรงสวย ทันสมัย สินค้า OTOP ผลิดโดยฝีมือของจังหวัดนครพนม
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <?php
+	// include_once("pages/prod_section.php");
+	?>
+   <div style=" margin-bottom: -100px;"></div>
+   <!-- product section -->
+   <div class="product-section mt-150 mb-150 ">
+      <div class="container">
+
+
+         <div class="row flex-row">
+
+            <?php
+				include_once("pages/connectDB.php");
+				$conn = new DB_conn; //สร้าง object ชื่อ $condb
+				$parentPath  = '/Shop/pages/';
+
+				$id = 3;
+				$sql = $conn->select_prod($id);
+				$data = mysqli_fetch_array($sql);
+				$str = $data['prod_img'];
+				$pathImg = substr($str, 9); //นับเเต่ตัวที่9
+				$parentPathImg  = '/Shop/p_img/' . $pathImg;
+
+				?>
+
+            <div class="col-lg-4 col-md-6 text-center">
+               <div class="single-product-item">
+                  <div class="product-image">
+                     <a
+                        href="<?php echo $parentPath ?>single-product.php?p_id=<?php echo $data['prod_id']; ?>">
+                        <img src="<?php echo "$parentPathImg " ?>" alt="" /></a>
+                  </div>
+                  <h3><?php echo $data['prod_name'] ?></h3>
+                  <!-- <h3>555</h3> -->
+                  <p class="product-price"><span>Price</span>฿<?php echo $data['prod_price'] ?> </p>
+
+                  <a href="<?php echo $parentPath2 ?>/cart.php?p_id=<?php echo $data['prod_id'] ?>&act=add&qty=1"
+                     class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+
+
+               </div>
+            </div>
+
+
+            <?php
+
+				$id = 8;
+				$sql = $conn->select_prod($id);
+				$data = mysqli_fetch_array($sql);
+				$str = $data['prod_img'];
+				$pathImg = substr($str, 9); //นับเเต่ตัวที่9
+				$parentPathImg  = '/Shop/p_img/' . $pathImg;
+
+				?>
+
+            <div class="col-lg-4 col-md-6 text-center">
+               <div class="single-product-item">
+                  <div class="product-image">
+                     <a
+                        href="<?php echo $parentPath ?>single-product.php?p_id=<?php echo $data['prod_id']; ?>">
+                        <img src="<?php echo "$parentPathImg " ?>" alt="" /></a>
+                  </div>
+                  <h3><?php echo $data['prod_name'] ?></h3>
+                  <p class="product-price"><span>Price</span>฿<?php echo $data['prod_price'] ?> </p>
+                  <a href="<?php echo $parentPath2 ?>/cart.php?p_id=<?php echo $data['prod_id'] ?>&act=add&qty=1"
+                     class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+
+               </div>
+            </div>
+
+            <?php
+				$id = 7;
+				$sql = $conn->select_prod($id);
+				$data = mysqli_fetch_array($sql);
+				$str = $data['prod_img'];
+				$pathImg = substr($str, 9); //นับเเต่ตัวที่9
+				$parentPathImg  = '/Shop/p_img/' . $pathImg;
+
+
+				?>
+            <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
+               <div class="single-product-item">
+                  <div class="product-image">
+                     <a
+                        href="<?php echo $parentPath ?>single-product.php?p_id=<?php echo $data['prod_id']; ?>">
+                        <img src="<?php echo "$parentPathImg " ?>" alt="" /></a>
+                  </div>
+                  <h3><?php echo $data['prod_name'] ?></h3>
+                  <p class="product-price"><span>Price</span>฿<?php echo $data['prod_price'] ?> </p>
+                  <a href="<?php echo $parentPath2 ?>/cart.php?p_id=<?php echo $data['prod_id'] ?>&act=add&qty=1"
+                     class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+   <!-- end product section -->
+
+
+
+
+
+   <!-- testimonail-section -->
+
+   <?php include_once('reviewSection.php')?>
+
+   <!-- end testimonail-section -->
+
+
+
+
+
+   <!-- advertisement section -->
+   <div  style=" margin-top: 300px; margin-bottom :300px" class="feature-bg3">
+   <div class="abt-section mb-150">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-6 col-md-12">
+               <!-- <div class="abt-bg">
+                  <a href="https://www.youtube.com/watch?v=DBLlFWYcIGQ" class="video-play-btn popup-youtube"><i
+                        class="fas fa-play"></i></a>
+               </div> -->
+            </div>
+            <div class="col-lg-6 col-md-12">
+               <div class="abt-text">
+                  <!-- <p class="top-sub">ความเป็นมา</p> -->
+                  <h2>Why  <span class="orange-text">OTOP</span></h2>
+                  <p>ความเป็นเอกลักษณ์ของสินค้า OTOP จากจังหวัดนครพนมนั้นสร้างจากความพิถีพิถัน
+                     เป็นสินค้าที่ถูกผลิตขึ้นมาจากการร่วมมือกันของชุมชนเลือกใช้วัสดุดีๆ เช่น กระเป๋าสานจากต้นกก
+                     ที่ผลิตจากวัสดุพื้นบ้านที่มีความทนทานและทำให้เป็นเอกลักษณ์ของจังหวัดนครพนม
+                     .</p>
+                  <p>ไม่ต้องเดินทางไกล! สั่งซื้อ กระเป๋าสานจากต้นกก สินค้า OTOP จากจังหวัดนครพนมผ่านเว็บไซต์ได้ทันที
+                     สินค้ามีคุณภาพและเป็นเอกลักษณ์ คุณจะได้เป็นส่วนหนึ่งในการสนับสนุนชุมชนและวัฒนธรรมของจังหวัดนครพนม
+                    .</p>
+                  <a href="about.php" class="boxed-btn mt-4">เพื่มเติม</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+   <!-- end advertisement section -->
+
+
+
+
+
+
+
+   <?php
+	include_once("pages/footer.php");
+	?>
+
+
+
 
 
 </body>
-
-
-<!-- jquery -->
-<script src="assets/js/jquery-1.11.3.min.js"></script>
-<!-- bootstrap -->
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<!-- count down -->
-<script src="assets/js/jquery.countdown.js"></script>
-<!-- isotope -->
-<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
-<!-- waypoints -->
-<script src="assets/js/waypoints.js"></script>
-<!-- owl carousel -->
-<script src="assets/js/owl.carousel.min.js"></script>
-<!-- magnific popup -->
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<!-- mean menu -->
-<script src="assets/js/jquery.meanmenu.min.js"></script>
-<!-- sticker js -->
-<script src="assets/js/sticker.js"></script>
-<!-- main js -->
-<script src="assets/js/main.js"></script>

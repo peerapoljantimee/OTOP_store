@@ -42,6 +42,12 @@ if ($fileextension == 'jpg' or $fileextension == 'png') {
                                           }
                             }
               }
+}else{ 
+   echo "<script>alert('บันทึกข้อมูลไม่สำเร็จ')</script>";
+   echo "<script>window.location='addProd.php'</script>";
+
+
+
 }
 
 ?>

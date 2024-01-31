@@ -14,7 +14,7 @@ $conn = new DB_conn; //สร้าง object ชื่อ $condb
 	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
-	<title>Fruitkha</title>
+	<title>Edit Member</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
@@ -105,7 +105,7 @@ $conn = new DB_conn; //สร้าง object ชื่อ $condb
                 <label for="address" class="form-label">address:</label>
                 <input type="text" class="form-control" id="address" name="address" value=<?php echo $address; ?>>
             </div>
-            <button type="submit" class="btn btn-primary" id="edit" name="edit">บันทึกการเปลี่ยนแปลง </button>
+            <button type="submit" class="cart-btn" id="edit" name="edit">บันทึกการเปลี่ยนแปลง </button>
         </form>
     </div>
     <?php
@@ -126,13 +126,13 @@ $conn = new DB_conn; //สร้าง object ชื่อ $condb
         }
     }
     ?>
-
+<br><br><br>
     <!-- Footer-->
     <?php
+	 include_once('footer.php')
     ?>
     
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+  
     <!-- jquery -->
 	<script src="../assets/js/jquery-1.11.3.min.js"></script>
 	<!-- bootstrap -->

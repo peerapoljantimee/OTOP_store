@@ -44,8 +44,8 @@
 							<i class="fas fa-shipping-fast"></i>
 						</div>
 						<div class="content">
-							<h3>Free Shipping</h3>
-							<p>When order over $75</p>
+							<h3>ส่งทั่วไทย</h3>
+							<p>ราคาเดียว 45 บาทต่อการสั่งซื้อ!</p>
 						</div>
 					</div>
 				</div>
@@ -56,7 +56,7 @@
 						</div>
 						<div class="content">
 							<h3>24/7 Support</h3>
-							<p>Get support all day</p>
+							<p>ติดต่อเราได้ตลอด 24 ชั่วโมง!</p>
 						</div>
 					</div>
 				</div>
@@ -66,8 +66,8 @@
 							<i class="fas fa-sync"></i>
 						</div>
 						<div class="content">
-							<h3>Refund</h3>
-							<p>Get refund within 3 days!</p>
+							<h3>การคืนสินค้า</h3>
+							<p>สามารถคืนสินค้าได้ใน 7 วัน!</p>
 						</div>
 					</div>
 				</div>
